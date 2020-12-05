@@ -144,7 +144,7 @@ if(error != ERR_NONE) {
 }
 ```
 
-The handler will check the serial port for incoing commands, parse them, attempt to run any
+The handler will check the serial port for incoming commands, parse them, attempt to run any
 bound glue functions, and then print an error message if an error code is returned.
 
 ### Use the Commands
