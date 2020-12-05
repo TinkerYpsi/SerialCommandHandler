@@ -12,8 +12,8 @@
  * "commandName arg1 arg2 ... arg-n"
  * 
  * The SerialCommandHandler will parse the string from the serial terminal
- * and compare the commandName to a library of commands you have created. If
- * the string name matches an entry in your library, it will call the associated
+ * and compare the commandName to a dictionary of commands you have created. If
+ * the string name matches an entry in your dictionary, it will call the associated
  * "glue" function.
  * 
  * "Glue" functions are essentially an interface between your underlying functions
@@ -22,7 +22,7 @@
  * CMD_ERROR myFunction(String args[], int arg_count);
  * 
  * CMD_ERROR is an enum value that allows the function to return one of
- * the error values defined in SerialCommandHandler.hpp. This allows for
+ * the error values defined in SerialCommandHandler.h. This allows for
  * upstream error handling.
  * 
  * args[] is an array of arguments passed as String objects that must
