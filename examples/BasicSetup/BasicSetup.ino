@@ -44,9 +44,11 @@
 
 #include "SerialCommandHandler.h"
 
+
 /****************************
  *   Underlying Functions   *
  ****************************/
+
 void blinkLED(int blink_count, int blink_millis) {
   for(int i = 0; i < blink_count; i++) {
     digitalWrite(LED_BUILTIN, HIGH);
@@ -132,6 +134,7 @@ CMD_ERROR setLedCmd(String args[], int arg_count) {
 /******************************
  *     Command Dictionary     *
  ******************************/
+
 const int command_count = 2;
 const Command commandDictionary[] = {
   {String("blink"), blinkLedCmd},
@@ -142,6 +145,7 @@ const Command commandDictionary[] = {
 /****************************
  *      Core Functions      *
  ****************************/
+
 void setup() {
   // Initialize the led
   pinMode(LED_BUILTIN, OUTPUT);
