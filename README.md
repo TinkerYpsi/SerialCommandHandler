@@ -3,7 +3,7 @@
 ## What is it for?
 
 This library is meant to simplify connecting serial string 
-commands to underlying functions in your library without requiring
+commands to underlying functions in your Arduino code without requiring
 those functions to know anything about the serial interface. 
 
 Given commands in the serial monitor of the form
