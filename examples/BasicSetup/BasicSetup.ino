@@ -156,6 +156,7 @@ void setup() {
 
   Serial.begin(115200);
   Serial.println("Ready for commands!");
+  Serial.println("Type 'help' for a list of available commands.");
 }
 
 void loop() {
