@@ -135,7 +135,6 @@ CMD_ERROR setLedCmd(String args[], int arg_count) {
  *     Command Dictionary     *
  ******************************/
 
-const int command_count = 2;
 const Command commandDictionary[] = {
   {String("blink"), blinkLedCmd},
   {String("set"), setLedCmd}
@@ -147,16 +146,25 @@ const Command commandDictionary[] = {
  ****************************/
 
 void setup() {
-  // Initialize the led
+  
+  // Start the serial connection and wait for the monitor to open
+  Serial.begin(115200);
+  while(!Serial);
+
+  // Initialize the LED
   pinMode(LED_BUILTIN, OUTPUT);
   digitalWrite(LED_BUILTIN, LOW);
 
-  // Connect the command dictionary to the command handler 
+  // This line keeps us from having to manually adjust the command count
+  // size each time we add or remove a command from the dictionary  
+  int command_count = sizeof(commandDictionary) / sizeof(Command);
+
+  // Connect the command dictionary to the command handler
   Command::setCommandDictionary(commandDictionary, command_count);
 
-  Serial.begin(115200);
-  Serial.println("Ready for commands!");
-  Serial.println("Type 'help' for a list of available commands.");
+  Serial.println(String(F("Initialized a dictionary with ")) + String(command_count) + String(F(" commands")));  
+  Serial.println(F("Ready for commands!"));
+  Serial.println(F("Type 'help' for a list of available commands."));
 }
 
 void loop() {

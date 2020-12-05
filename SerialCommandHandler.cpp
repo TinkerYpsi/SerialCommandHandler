@@ -138,7 +138,7 @@ CMD_ERROR Command::runHandler() {
     Serial.println();
     
     if(cmd_str == "help") {
-      Serial.println("Command dictionary:");
+      Serial.println(F("Command dictionary:"));
       for(int i = 0; i < Command::command_count; i++) {
         Serial.println(Command::command_dictionary[i].cmd_name);
       }
