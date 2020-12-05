@@ -7,7 +7,7 @@
  * commands to underlying functions in your library without requiring
  * those functions to know anything about the serial interface. 
  * 
- * All serial monitor commands must stake the following form:
+ * All serial monitor commands must take the following form:
  * 
  * "commandName arg1 arg2 ... arg-n"
  * 
