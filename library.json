@@ -1,0 +1,26 @@
+{
+    "name": "SerialCommandHandler",
+    "description": "A serial command interface library",
+    "keywords": "serial command, serial, command, parse, parsing",
+    "authors": [
+        {
+            "name": "Michael G. Ploof"
+        },
+        {
+            "name": "Michael G. Ploof",
+            "email": "michael@tinkertech.io",
+            "url": "https://tinkertech.dev",
+            "maintainer": true
+        }
+    ],
+    "repository": {
+        "type": "git",
+         "url": "https://github.com/tinkerypsi/SerialCommandHandler"
+    },
+    "version": "1.0",
+    "homepage": "https://github.com/tinkerypsi/SerialCommandHandler",
+    "frameworks": "Arduino",
+    "examples": [
+        "examples/*/*.ino"
+    ]
+}
