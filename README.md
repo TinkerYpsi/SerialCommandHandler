@@ -56,7 +56,7 @@ an error code if the number of arguments passed does not match the number requir
 in the underlying function.
 
 Within the glue function, you will do your error checking on the string argument,
-covert them to the appropriate types, call the underlying function, and include
+convert them to the appropriate types, call the underlying function, and include
 any other functionality that is useful specifically to a serial command.
 
 Below is an example of an underlying function and a glue function.
@@ -110,7 +110,7 @@ CMD_ERROR blinkLedCmd(String args[], int arg_count) {
 
 ### Create the Command Dictionary
 
-Once you have created your glue functions, you need to created a command dictionary,
+Once you have created your glue functions, you need to create a command dictionary,
 which is simply an array of `Command` objects that the parser will reference. The
 `Command` constructor takes two arguments: `Command(<string name>, <function pointer>)`.
 The string name is the command you will type into the serial monitor. The function pointer
@@ -144,8 +144,8 @@ if(error != ERR_NONE) {
 }
 ```
 
-The handler will check the serial port for incoming commands, parse them, attempt to run any
-bound glue functions, and then print an error message if an error code is returned.
+The handler will check the serial port for incoming commands, parse them, run any
+bound glue function, and then print an error message if an error code is returned.
 
 ### Use the Commands
 
